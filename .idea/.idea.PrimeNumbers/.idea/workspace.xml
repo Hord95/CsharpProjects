@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9a799b1a-0ecb-4c30-bcbb-d63ea0b0e313" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_project/test_project_oop/test_project_oop.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_project/test_project_oop/test_project_oop/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_project/test_project_oop/test_project_oop/test_project_oop.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/1.PrimeNumbers/PrimeNumbers(Hord95)/PrimeNumbers(Hord95).csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/1.PrimeNumbers/PrimeNumbers(Hord95)/task1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/1.PrimeNumbers/PrimeNumbers.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/1.PrimeNumbers/PrimeNumbers/PrimeNumbers.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/1.PrimeNumbers/PrimeNumbers/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/1.PrimeNumbers/PrimeNumbersTest/PrimeNumbersTest.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/1.PrimeNumbers/PrimeNumbersTest/UnitTest1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/2.Discriminant/2.Discriminant.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/2.Discriminant/2.Discriminant/2.Discriminant.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/2.Discriminant/2.Discriminant/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/3.AreaOfTriangle/AreaOfTriangle.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/3.AreaOfTriangle/AreaOfTriangle/AreaOfTriangle.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/3.AreaOfTriangle/AreaOfTriangle/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/4.Factorial/4.Factorial.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/4.Factorial/4.Factorial/4.Factorial.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/4.Factorial/4.Factorial/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/5.Factorial wo cycles/5. Factorial wo cycles/5. Factorial wo cycles.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/5.Factorial wo cycles/5. Factorial wo cycles/5. Factorial wo cycles/5. Factorial wo cycles.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/5.Factorial wo cycles/5. Factorial wo cycles/5. Factorial wo cycles/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/6. IsItPalindrome/6. IsItPalindrome.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/6. IsItPalindrome/6. IsItPalindrome/6. IsItPalindrome.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/6. IsItPalindrome/6. IsItPalindrome/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/7.reverseString/reverseString/reverseString.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/7.reverseString/reverseString/reverseString/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/7.reverseString/reverseString/reverseString/reverseString.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/final/float-numbers.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/hw/homework.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week1_csharp-basics/questions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week2_oop/hw/1.oop_in_real_world/test_project_oop/test_project_oop.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week2_oop/hw/1.oop_in_real_world/test_project_oop/test_project_oop/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week2_oop/hw/1.oop_in_real_world/test_project_oop/test_project_oop/test_project_oop.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week2_oop/hw/1.oop_in_real_world/test_project_oop/test_project_oop_test/UnitTest1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week2_oop/hw/1.oop_in_real_world/test_project_oop/test_project_oop_test/test_project_oop_test.csproj" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2466EwRVFQeeSNz7frHN8peRx3I" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <created>1642938585333</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642938585333</updated>
+      <workItem from="1642938831159" duration="36000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
