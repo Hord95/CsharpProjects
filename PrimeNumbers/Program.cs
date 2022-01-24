@@ -4,23 +4,21 @@
     {
         static void Main()
         {
-            int num;
             Console.Write("enter last number for finding last prime number:");
-            num = Convert.ToInt32(Console.ReadLine());
-            int divisor;
-            bool isPrime=true;
+            int num = Convert.ToInt32(Console.ReadLine());           
             for (int i = 2; i <= num; i++)
             {
-                for (divisor=2;divisor<num; divisor++)
+                var isPrime = true;
+                for (int j = 2;j != i; j++)
                 {
-                    if (i % divisor == 0 && divisor!=i)
+                    if (i % j == 0)
                     {
                         isPrime = false;
                         break;
                     }
                     isPrime = true;
                 }
-                if (isPrime == true)
+                if (isPrime)
                 {
                     Console.WriteLine(i);
                 }
