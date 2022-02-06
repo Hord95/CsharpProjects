@@ -1,17 +1,17 @@
 ﻿namespace Discriminant
 {
-    class Discriminant
+    public class Discriminant
     {
         public static void Main()
         {
             var formula = Console.ReadLine();
-            var a = 0d;
-            var b = 0d;
-            var c = 0d;
+            List<int> variables = new List<int>();
+            variables = SplitAndParse(formula);
+            var a = variables[0];
+            var b = variables[1];
+            var c = variables[2];
             double x1, x2;
-            double discriminant;
-            Input(formula, ref a,ref b,ref c);
-            discriminant = Math.Pow(b,2) - 4 * a * c;
+            var discriminant = Math.Pow(b,2) - 4 * a * c;
             if (discriminant < 0)
             {
                 Console.WriteLine("No roots");
@@ -29,48 +29,71 @@
             }
 
         }
-        public static void Input(string input, ref double a, ref double b, ref double c)
-        {
-            List<string> list = new List<string>();
-            bool sign = false;
-            string temp = "";
-            for (int i = 0; i < input.Length; i++) 
+            public static List<int> SplitAndParse(string input)
             {
-
-                if (i == 0)
-                    temp += input[i];
-                else if (input[i] == '-' || input[i] == '+')
+                List<int> numbers = new List<int>();
+                bool sign = false;
+                string temp = "";
+                for (int i=0;i<=input.Length-1;i++)
                 {
-                    list.Add(temp);
-                    temp = "";
+                    if (input[i] == '+' || input[i] == '-' || i==input.Length-1)
+                    {
+                        if (sign)
+                        {
+                            if (i == input.Length - 1)
+                            {
+                                temp += input[i];
+                            }
+                            numbers.Add(ParsePart(temp));
+                            temp = "";
+                        }
+                    }
+                    else
+                    {
+                        sign = true;
+                    }
                     temp += input[i];
                 }
-                else if (i == input.Length - 1)
-                {
-                    temp += input[i];
-                    list.Add(temp);
-                }
-                else
-                {
-                    temp += input[i];
-                }
+                return numbers;
             }
-            for (int i = 0;i < list.Count;i++)
+            public static int ParsePart (string part)
             {
-                if (list[i].Contains("x^2"))
+                int number;
+                if (part.Contains("x^2"))
                 {
-                    
-                    a=Convert.ToDouble(list[i].Replace("x^2","").Replace("+",""));
+                    if (part == "x^2")
+                    {
+                        number = 1;
+                    }
+                        else if (part == "-x^2")
+                    {
+                        number = -1;
+                    }
+                    else
+                    {
+                        int.TryParse((part.Replace("x^2", "").Replace("+", "")), out number);
+                    }
                 }
-                else if (list[i].Contains("x"))
+                else if (part.Contains("x"))
                 {
-                    b=Convert.ToDouble(list[i].Replace("x", "").Replace("+", ""));
+                    if (part == "x")
+                    {
+                        number = 1;
+                    }
+                    else if (part == "-x")
+                    {
+                        number = -1;
+                    }
+                    else
+                    {
+                        int.TryParse((part.Replace("x", "").Replace("+", "")), out number);
+                    }
                 }
                 else
                 {
-                    c=Convert.ToDouble(list[i].Replace("+",""));
+                   int.TryParse((part.Replace("+", "")),out number);
                 }
+                return number;
             }
         }
     }
-}
