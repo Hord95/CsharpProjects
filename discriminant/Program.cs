@@ -6,9 +6,9 @@
         {
             var formula = Console.ReadLine();
             int a, b, c;
-            SplitAndParse(formula,out a,out b,out c);
+            (a,b,c) = SplitAndParse(formula);
             var discriminant = Math.Pow(b, 2) - 4 * a * c;
-            if (discriminant < 0)
+            if (discriminant < 0 || a==0)
             {
                 Console.WriteLine("No roots");
             }
@@ -27,7 +27,7 @@
             }
 
         }
-        public static void SplitAndParse(string input, out int a, out int b, out int c)
+        public static (int,int ,int ) SplitAndParse(string input)
         {
             var numbers = new List<int>();
             bool sign = false;
@@ -52,10 +52,10 @@
                 }
                 part += input[i];
             }
-            a = numbers[0];
-            b = numbers[1];
-            c = numbers[2];
-
+           int a = numbers[0];
+           int b = numbers[1];
+           int c = numbers[2];
+           return (a,b,c);
         }
         public static int ParsePart(string part)
         {
