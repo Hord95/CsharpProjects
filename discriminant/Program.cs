@@ -15,15 +15,42 @@
             else if (discriminant == 0)
             {
                 double x1;
-                x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
-                Console.WriteLine("x = " + x1);
+                double numerator ;
+                numerator = (-b + Math.Sqrt(discriminant));
+                if (numerator == 0)
+                {
+                    Console.WriteLine(" no roots");
+                }
+                else
+                {
+                    x1 = numerator / (2 * a);
+                    Console.WriteLine("x = " + x1);
+                }
             }
             else
             {
                 double x1, x2;
-                x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
-                x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
-                Console.WriteLine("x1 = " + x1 + " x2 = " + x2);
+                double numerator;
+                numerator = (-b + Math.Sqrt(discriminant));
+                if (numerator == 0)
+                {
+                    Console.WriteLine("x1 - no root");
+                }
+                else
+                {
+                    x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+                    Console.WriteLine("x1 = " + x1 );
+                }
+                numerator = (-b - Math.Sqrt(discriminant));
+                if (numerator == 0)
+                {
+                    Console.WriteLine("x2 - no root");
+                }
+                else
+                {
+                    x2 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+                    Console.WriteLine("x2 = " + x2);
+                }
             }
 
         }
