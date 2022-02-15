@@ -1,4 +1,4 @@
-﻿namespace Area
+namespace Area
 {
     public class Triangle
     {
