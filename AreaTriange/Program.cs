@@ -6,24 +6,21 @@
         {
             Console.WriteLine("Enter from 1 to 3 side lenghts  : ");
             var input = Console.ReadLine();
-            var values = new List<double>();
             var partsInput = new List<string>(input.Split(' ').ToList());
             if (partsInput.Count < 1 || partsInput.Count > 3)
             {
                 Console.WriteLine("Enter from 1 to 3 side lenghts ");
                 return;
             }
+            var values = new List<double>();
             foreach (var part in partsInput)
             {
                 double number;
-                if (double.TryParse(part, out number))
-                {
-                    values.Add(number);
-                }
-                else
+                if (!double.TryParse(part, out number))
                 {
                     return;
                 }
+                values.Add(number);
             }
             var area = CalculateAreaTriangle(values);
             Console.WriteLine(area);
@@ -41,9 +38,13 @@
                     {
                         return values[0] * values[1] / 2;
                     }
-                default:
+                case 1:
                     {
                         return ((Math.Pow(values[0], 2) * Math.Sqrt(3)) / 4);
+                    }
+                default:
+                    {
+                        throw new ArgumentException(String.Format("A lot of values"));
                     }
             }
         }
