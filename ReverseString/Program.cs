@@ -5,12 +5,13 @@
         static void Main()
         {
             var text = Console.ReadLine();
-            var reverseText = "";
-            for (int i = text.Length - 1; i >= 0; i--)
-            {
-                reverseText += text[i];
-            }
-            Console.WriteLine(reverseText);
+            Console.WriteLine(Reverse(text));
+        }
+        public static string Reverse(string input)
+        {
+            var chars = input.ToArray();
+            Array.Reverse(chars);
+            return new string(chars);
         }
     }
 }
