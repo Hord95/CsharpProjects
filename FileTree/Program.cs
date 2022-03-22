@@ -8,78 +8,69 @@ namespace FileTree
             Console.WriteLine("Enter root (example,C:\\):");
             var nameDir = Console.ReadLine();
             Console.WriteLine($"{new DirectoryInfo(@nameDir).Name}");
+            bool includeFiles = false;
             if (nameDir.Contains(" -f"))
             {
                 nameDir = nameDir.Replace(" -f", "");
-                WithFlag(nameDir);
+                includeFiles = true;
             }
-            else
-            {
-                WithoutFlag(nameDir);
-            }
+           
+            //foreach(var file in new DirectoryInfo(@nameDir).GetDirectories())
+            //{
+                Console.WriteLine(fileTree(nameDir, includeFiles));
+            //}
+            
         }
 
-        static void WithFlag(string root, int down = 0)
+        static string fileTree(string root, bool includeFiles, int down = 0)
         {
             var dir = new DirectoryInfo(@root);
             var space = Repeat("\t", down);
-            foreach (var file in dir.GetFiles())
+            var result = new StringBuilder();
+            if (includeFiles == true)
             {
-                if (file.FullName == dir.GetFiles().Last().FullName)
+                foreach (var file in dir.GetFiles())
                 {
-                    Console.WriteLine($"{space}└───{file.Name}({file.Length}b)");
-                }
-                else
-                {
-                    Console.WriteLine($"{space}├───{file.Name}({file.Length}b)");
-                }
-            }
-            foreach (var folder in dir.GetDirectories())
-            {
-                if (folder.FullName == dir.GetDirectories().Last().FullName)
-                {
-                    Console.WriteLine(space + "└───" + folder.Name);
-                }
-                else
-                {
-                    Console.WriteLine(space + "├───" + folder.Name);
-                }
-
-                if (folder.Exists)
-                {
-                    down++;
-                    WithFlag(folder.FullName, down);
-                }
-                down--;
-            }
-        }
-
-
-        static void WithoutFlag(string root, int down = 0)
-        {
-            var dir = new DirectoryInfo(@root);
-            var space = Repeat("\t", down);
-            foreach (var folder in dir.GetDirectories())
-            {
-                if (folder.Exists)
-                {
-                    if (folder.FullName == dir.GetDirectories().Last().FullName)
+                    if (file.FullName == dir.GetFiles().Last().FullName)
                     {
-                        Console.WriteLine(space + "└───" + folder.Name + down);
+                        result.Append($"{space}└───{file.Name}({file.Length}b)\n");
                     }
                     else
                     {
-                        Console.WriteLine(space + "├───" + folder.Name + down);
+                        result.Append(space + "├───" + file.Name + "(" + file.Length + "b)\n");
                     }
                 }
-                if (folder.Exists)
-                {
-                    down++;
-                    WithoutFlag(folder.FullName, down);
-                }
-                down--;
             }
+           
+                var folders = dir.GetDirectories();
+
+                foreach (var folder in folders)
+                {
+
+
+                    if (folder.FullName == dir.GetDirectories().Last().FullName)
+                    {
+                        down++;
+                        result.Append((space + "└───" + folder.Name + "\n") + fileTree(folder.FullName, includeFiles , down));
+                   
+                    
+                    }
+                    else
+                    {
+                        down++;
+                        result.Append((space + "├───" + folder.Name + "\n" + fileTree(folder.FullName, includeFiles, down)));
+                       down--;
+                    }
+                }
+            
+                    //down++;
+                    //return fileTree(folder.FullName, includeFiles, result.ToString(), down);
+                    //down--;
+            return result.ToString();
+            
+            
         }
+
         static string Repeat(string word, int num)
         {
             var result = new StringBuilder();
